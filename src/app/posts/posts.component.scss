@@ -1,0 +1,26 @@
+table {
+  padding: 1rem;
+}
+
+th,
+td {
+  padding: 0.25rem;
+  border-bottom: 1px solid gray;
+  text-align: start;
+}
+
+.hyperlink {
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: blue;
+}
+
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}

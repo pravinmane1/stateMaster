@@ -1,0 +1,28 @@
+.nav {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1.125rem;
+  margin-top: 2rem;
+  li {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+.active {
+  text-decoration-color: violet !important;
+  text-decoration: underline;
+  color: cadetblue;
+}
+
+.container {
+  margin: 1rem;
+}
+
+.content-wrapper {
+margin-top: 1rem;
+}
+
+.app-title {
+  font-size: 2.5rem;
+}

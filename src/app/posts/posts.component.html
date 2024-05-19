@@ -1,0 +1,27 @@
+<button [routerLink]="['add']">Add Post</button>
+<button (click)="onAllClear()">Clear all Posts</button>
+
+<div class="container">
+  @if (posts$|async) {
+  <table class="flex-grow">
+    <tr>
+      <th>id</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th></th>
+    </tr>
+    @for (post of posts$|async; track $index) {
+    <tr>
+      <td>{{ post.id }}</td>
+      <td>{{ post.title }}</td>
+      <td>{{ post.description }}</td>
+      <td class="hyperlink" [routerLink]="['edit', post.id]">Edit</td>
+     <button (click)="onPostDelete(post.id)">Delete</button>
+    </tr>
+    }
+  </table>
+  }
+  <div class="flex-grow">
+    <router-outlet></router-outlet>
+  </div>
+</div>
